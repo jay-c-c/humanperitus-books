@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PDF Index</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      margin-bottom: 16px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 8px 0;
+    }
+    a {
+      text-decoration: none;
+      color: #2563eb;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h1>PDF Files</h1>
+<ul id="file-list">Loading…</ul>
+
+<script>
+  const username = "jay-c-c";
+  const repo = "humanperitus-books";
+  const branch = "main"; // change if needed
+
+  const apiURL = `https://api.github.com/repos/${username}/${repo}/contents`;
+
+  fetch(apiURL)
+    .then(res => res.json())
+    .then(files => {
+      const list = document.getElementById("file-list");
+      list.innerHTML = "";
+
+      files
+        .filter(file => file.name.toLowerCase().endsWith(".pdf"))
+        .forEach(file => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+
+          a.href = file.name; // GitHub Pages relative link
+          a.textContent = file.name;
+          a.target = "_blank";
+
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+
+      if (!list.children.length) {
+        list.textContent = "No PDF files found.";
+      }
+    })
+    .catch(err => {
+      document.getElementById("file-list").textContent =
+        "Failed to load file list.";
+      console.error(err);
+    });
+</script>
+
+</body>
+</html>
