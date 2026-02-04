@@ -2,23 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>PDF Index</title>
+  <title>Auditing Course Material</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
     h1 {
-      margin-bottom: 16px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 20px;
     }
     ul {
       list-style: none;
       padding: 0;
+      columns: 2;
     }
     li {
-      margin: 8px 0;
+      margin: 6px 0;
     }
     a {
       text-decoration: none;
@@ -27,50 +32,87 @@
     a:hover {
       text-decoration: underline;
     }
+    @media (max-width: 600px) {
+      ul {
+        columns: 1;
+      }
+    }
   </style>
 </head>
 <body>
 
-<h1>PDF Files</h1>
-<ul id="file-list">Loading…</ul>
+<h1>Auditing Course Material</h1>
+<p>Click a part to open the PDF.</p>
 
-<script>
-  const username = "jay-c-c";
-  const repo = "humanperitus-books";
-  const branch = "main"; // change if needed
+<ul>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%201.pdf" target="_blank">Part 1</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%202.pdf" target="_blank">Part 2</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%203.pdf" target="_blank">Part 3</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%204.pdf" target="_blank">Part 4</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%205.pdf" target="_blank">Part 5</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%206.pdf" target="_blank">Part 6</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%207.pdf" target="_blank">Part 7</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%208.pdf" target="_blank">Part 8</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%209.pdf" target="_blank">Part 9</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2010.pdf" target="_blank">Part 10</a></li>
 
-  const apiURL = `https://api.github.com/repos/${username}/${repo}/contents`;
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2011.pdf" target="_blank">Part 11</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2012.pdf" target="_blank">Part 12</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2013.pdf" target="_blank">Part 13</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2014.pdf" target="_blank">Part 14</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2015.pdf" target="_blank">Part 15</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2016.pdf" target="_blank">Part 16</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2017.pdf" target="_blank">Part 17</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2018.pdf" target="_blank">Part 18</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2019.pdf" target="_blank">Part 19</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2020.pdf" target="_blank">Part 20</a></li>
 
-  fetch(apiURL)
-    .then(res => res.json())
-    .then(files => {
-      const list = document.getElementById("file-list");
-      list.innerHTML = "";
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2021.pdf" target="_blank">Part 21</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2022.pdf" target="_blank">Part 22</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2023.pdf" target="_blank">Part 23</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2024.pdf" target="_blank">Part 24</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2025.pdf" target="_blank">Part 25</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2026.pdf" target="_blank">Part 26</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2027.pdf" target="_blank">Part 27</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2028.pdf" target="_blank">Part 28</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2029.pdf" target="_blank">Part 29</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2030.pdf" target="_blank">Part 30</a></li>
 
-      files
-        .filter(file => file.name.toLowerCase().endsWith(".pdf"))
-        .forEach(file => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2031.pdf" target="_blank">Part 31</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2032.pdf" target="_blank">Part 32</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2033.pdf" target="_blank">Part 33</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2034.pdf" target="_blank">Part 34</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2035.pdf" target="_blank">Part 35</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2036.pdf" target="_blank">Part 36</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2037.pdf" target="_blank">Part 37</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2038.pdf" target="_blank">Part 38</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2039.pdf" target="_blank">Part 39</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2040.pdf" target="_blank">Part 40</a></li>
 
-          a.href = file.name; // GitHub Pages relative link
-          a.textContent = file.name;
-          a.target = "_blank";
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2041.pdf" target="_blank">Part 41</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2042.pdf" target="_blank">Part 42</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2043.pdf" target="_blank">Part 43</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2044.pdf" target="_blank">Part 44</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2045.pdf" target="_blank">Part 45</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2046.pdf" target="_blank">Part 46</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2047.pdf" target="_blank">Part 47</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2048.pdf" target="_blank">Part 48</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2049.pdf" target="_blank">Part 49</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2050.pdf" target="_blank">Part 50</a></li>
 
-          li.appendChild(a);
-          list.appendChild(li);
-        });
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2051.pdf" target="_blank">Part 51</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2052.pdf" target="_blank">Part 52</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2053.pdf" target="_blank">Part 53</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2054.pdf" target="_blank">Part 54</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2055.pdf" target="_blank">Part 55</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2056.pdf" target="_blank">Part 56</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2057.pdf" target="_blank">Part 57</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2058.pdf" target="_blank">Part 58</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2059.pdf" target="_blank">Part 59</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2060.pdf" target="_blank">Part 60</a></li>
 
-      if (!list.children.length) {
-        list.textContent = "No PDF files found.";
-      }
-    })
-    .catch(err => {
-      document.getElementById("file-list").textContent =
-        "Failed to load file list.";
-      console.error(err);
-    });
-</script>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2061.pdf" target="_blank">Part 61</a></li>
+</ul>
 
 </body>
 </html>
