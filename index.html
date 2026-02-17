@@ -2,69 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auditing Course Material</title>
-
   <style>
+    :root {
+      --primary: #2563eb;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+    }
+
     body {
-      font-family: system-ui, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: none; /* hidden until password is correct */
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.5;
     }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
     h1 {
-      margin-bottom: 10px;
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 8px;
+      color: var(--text-main);
     }
-    p {
-      color: #555;
-      margin-bottom: 20px;
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
     }
+
+    /* Grid Layout */
     ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
       list-style: none;
       padding: 0;
-      columns: 2;
     }
+
+    /* Card Styling */
     li {
-      margin: 6px 0;
+      perspective: 1000px;
     }
+
     a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: var(--card-bg);
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
       text-decoration: none;
-      color: #2563eb;
+      color: var(--text-main);
+      font-weight: 600;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
+
     a:hover {
-      text-decoration: underline;
+      transform: translateY(-4px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+      color: var(--primary);
     }
-    @media (max-width: 600px) {
+
+    /* Mock PDF Icon */
+    a::before {
+      content: "PDF";
+      display: block;
+      background: #fee2e2;
+      color: #dc2626;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
       ul {
-        columns: 1;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
-
-  <script>
-    const PASSWORD = "audit123"; // change this
-
-    const entered = prompt("Enter password:");
-    if (entered === PASSWORD) {
-      document.addEventListener("DOMContentLoaded", () => {
-        document.body.style.display = "block";
-      });
-    } else {
-      alert("Incorrect password");
-      document.location.href = "about:blank";
-    }
-  </script>
 </head>
-
 <body>
 
-<h1>Auditing Course Material</h1>
-<p>Click a part to open the PDF.</p>
+<header>
+  <h1>Auditing Course Material</h1>
+  <p class="subtitle">Select a module below to view the study material.</p>
+</header>
 
 <ul>
   <li><a href="Auditing%20Course%20Material%20-%20Part%201.pdf" target="_blank">Part 1</a></li>
   <li><a href="Auditing%20Course%20Material%20-%20Part%202.pdf" target="_blank">Part 2</a></li>
-  <!-- rest of your links unchanged -->
+  <li><a href="Auditing%20Course%20Material%20-%20Part%203.pdf" target="_blank">Part 3</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%204.pdf" target="_blank">Part 4</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%205.pdf" target="_blank">Part 5</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%206.pdf" target="_blank">Part 6</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%207.pdf" target="_blank">Part 7</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%208.pdf" target="_blank">Part 8</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%209.pdf" target="_blank">Part 9</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2010.pdf" target="_blank">Part 10</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2011.pdf" target="_blank">Part 11</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2012.pdf" target="_blank">Part 12</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2013.pdf" target="_blank">Part 13</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2014.pdf" target="_blank">Part 14</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2015.pdf" target="_blank">Part 15</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2016.pdf" target="_blank">Part 16</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2017.pdf" target="_blank">Part 17</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2018.pdf" target="_blank">Part 18</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2019.pdf" target="_blank">Part 19</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2020.pdf" target="_blank">Part 20</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2021.pdf" target="_blank">Part 21</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2022.pdf" target="_blank">Part 22</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2023.pdf" target="_blank">Part 23</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2024.pdf" target="_blank">Part 24</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2025.pdf" target="_blank">Part 25</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2026.pdf" target="_blank">Part 26</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2027.pdf" target="_blank">Part 27</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2028.pdf" target="_blank">Part 28</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2029.pdf" target="_blank">Part 29</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2030.pdf" target="_blank">Part 30</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2031.pdf" target="_blank">Part 31</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2032.pdf" target="_blank">Part 32</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2033.pdf" target="_blank">Part 33</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2034.pdf" target="_blank">Part 34</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2035.pdf" target="_blank">Part 35</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2036.pdf" target="_blank">Part 36</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2037.pdf" target="_blank">Part 37</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2038.pdf" target="_blank">Part 38</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2039.pdf" target="_blank">Part 39</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2040.pdf" target="_blank">Part 40</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2041.pdf" target="_blank">Part 41</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2042.pdf" target="_blank">Part 42</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2043.pdf" target="_blank">Part 43</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2044.pdf" target="_blank">Part 44</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2045.pdf" target="_blank">Part 45</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2046.pdf" target="_blank">Part 46</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2047.pdf" target="_blank">Part 47</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2048.pdf" target="_blank">Part 48</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2049.pdf" target="_blank">Part 49</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2050.pdf" target="_blank">Part 50</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2051.pdf" target="_blank">Part 51</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2052.pdf" target="_blank">Part 52</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2053.pdf" target="_blank">Part 53</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2054.pdf" target="_blank">Part 54</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2055.pdf" target="_blank">Part 55</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2056.pdf" target="_blank">Part 56</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2057.pdf" target="_blank">Part 57</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2058.pdf" target="_blank">Part 58</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2059.pdf" target="_blank">Part 59</a></li>
+  <li><a href="Auditing%20Course%20Material%20-%20Part%2060.pdf" target="_blank">Part 60</a></li>
   <li><a href="Auditing%20Course%20Material%20-%20Part%2061.pdf" target="_blank">Part 61</a></li>
 </ul>
 
